@@ -4,8 +4,7 @@ import MainPage from './screens/MainPage';
 function App() {
   return (
     <div className="App">
-   <MainPage/>
-   welp
+      <MainPage/>
     </div>
   );
 }

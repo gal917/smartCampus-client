@@ -65,6 +65,8 @@ const Container = styled.div`
     display: flex;
     text-align: center;
     height:100%;
+    overflow:scroll;
+
 `
 const Card = styled.div`
     margin:24px;
@@ -74,7 +76,6 @@ const Card = styled.div`
     border-radius: 15px;
     justify-content: space-around;
     background-color: #BDD7EE;
-
 `
 const CustomImg = styled.img`
     max-width: 100%;

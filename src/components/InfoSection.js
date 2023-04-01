@@ -8,7 +8,7 @@ const InfoSection = () => {
     <MainContainer>
         <CustomImg src={campus} alt="Smart Campus screnery"/>
         <TextArea>
-            <h2>Smart Campus</h2>
+        <h2>Smart Campus</h2>
             <p>is an innovative approach to a common place based on optimal use of resources while maximizing the comfort of living.
                 At the base of the smart campus is a detection, information processing and decision-making system based on adaptive AI.
                 The results of system activity are provided to users according to their roles on campus.
@@ -21,29 +21,59 @@ const InfoSection = () => {
 
 export default InfoSection
 const CustomImg = styled.img`
-max-width: 100%;
-height: auto;
+  width: 50%;
+  height: auto;
+  float: left;
+  margin-right: 20px;
 `
+
 const TextArea = styled.div`
-p {
-    margin-bottom: 20px;
+flex-grow: 1;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+text-align: center;
+  p {
+    margin: 0;
+    font-size: 1.5em;
     line-height: 1.5;
   }
-h2 {
+
+  h2 {
     margin-bottom: 20px;
     font-size: 36px;
   }
 
-`
-const MainContainer = styled.div`
-@media (max-width: 768px) {
-    display: block;
-}
-background-color: #f7f7f7;
-padding: 50px;
-display: flex;
-width: 100%;
-align-items: center;
-text-align: center;
+  /* Media queries */
+  @media print {
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    /* Adjust margins */
+    body {
+      margin: 0;
+    }
+
+    main {
+      margin: 50px;
+    }
+  }
 `
 
+const MainContainer = styled.div`
+  padding: 50px;
+  display: flex;
+  align-items: center;
+
+  /* Media queries */
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`

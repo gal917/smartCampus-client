@@ -3,12 +3,14 @@ import MainHeader from '../components/MainHeader'
 import "../Style.css"
 import styled from 'styled-components'
 import MainBody from '../components/MainBody'
+import Footer from '../components/Footer'
 
 const mainPage = () => {
   return (
   <MainContainer>
       <MainHeader/>
       <MainBody/>
+      <Footer/>
    
  
 {/*     

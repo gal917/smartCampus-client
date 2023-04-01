@@ -1,59 +1,52 @@
 import React from 'react'
 import styled from 'styled-components';
-import cardPower from '../../assets/cardPower.png'
-import cardClimate from '../../assets/cardClimate.png'
-import cardWater from '../../assets/cardWater.png'
-import cardCleanliness from '../../assets/cardCleanliness.png'
-import cardRecycle from '../../assets/cardRecycle.png'
-import cardEcoHumanspace from '../../assets/cardEcoHumanspace.png'
-
-
+import { FaBolt, FaTemperatureLow, FaTint, FaRecycle, FaTree, FaTrash } from 'react-icons/fa';
 
 const CardsRow = () => {
-    return (
+  return (
     <Container>
-        <Card>
-            <CustomImg src={cardPower} alt="Smart Campus power card"/>
-            <TextArea>Optimizing power consumption
-            </TextArea>
-            <CardFooterButton>Learn More!</CardFooterButton>
-        </Card>
-        <Card>
-            <CustomImg src={cardClimate} alt="Smart Campus climate card"/>
-            <TextArea>
-                Microclimate And air Quality monitoring
-            </TextArea>
-            <CardFooterButton>Learn More!</CardFooterButton>
-        </Card>
-        <Card>
-            <CustomImg src={cardWater} alt="Smart Campus water card"/>
-            <TextArea>
-                Optimizing water consumption
-            </TextArea>
-            <CardFooterButton>Learn More!</CardFooterButton>
-        </Card>
-        <Card>
-            <CustomImg src={cardRecycle} alt="Smart Campus power card"/>
-            <TextArea>
-                The recycling and garbage efficiency 
-            </TextArea>
-            <CardFooterButton>Learn More!</CardFooterButton>
-        </Card>
-        <Card>
-            <CustomImg src={cardEcoHumanspace} alt="Smart Campus power card"/>
-            <TextArea>
-                Micro-climatic Eco-Human space
-            </TextArea>
-            <CardFooterButton>Learn More!</CardFooterButton>
-        </Card>
-        <Card>
-            <CustomImg src={cardCleanliness} alt="Smart Campus power card"/>
-            <TextArea>
-                Increasing campus cleanliness
-            </TextArea>
-            <CardFooterButton>Learn More!</CardFooterButton>
-        </Card>
-        
+      <Card>
+        <IconContainer>
+          <FaBolt size={64} color="#007FFF" />
+        </IconContainer>
+        <TextArea>Optimizing Power Consumption</TextArea>
+        <CardFooterButton>Learn More!</CardFooterButton>
+      </Card>
+      <Card>
+        <IconContainer>
+          <FaTemperatureLow size={64} color="#007FFF" />
+        </IconContainer>
+        <TextArea>Microclimate and Air Quality Monitoring</TextArea>
+        <CardFooterButton>Learn More!</CardFooterButton>
+      </Card>
+      <Card>
+        <IconContainer>
+          <FaTint size={64} color="#007FFF" />
+        </IconContainer>
+        <TextArea>Optimizing Water Consumption</TextArea>
+        <CardFooterButton>Learn More!</CardFooterButton>
+      </Card>
+      <Card>
+        <IconContainer>
+          <FaRecycle size={64} color="#007FFF" />
+        </IconContainer>
+        <TextArea>The Recycling and Garbage Efficiency</TextArea>
+        <CardFooterButton>Learn More!</CardFooterButton>
+      </Card>
+      <Card>
+        <IconContainer>
+          <FaTree size={64} color="#007FFF" />
+        </IconContainer>
+        <TextArea>Micro-climatic Eco-Human Space</TextArea>
+        <CardFooterButton>Learn More!</CardFooterButton>
+      </Card>
+      <Card>
+        <IconContainer>
+          <FaTrash size={64} color="#007FFF" />
+        </IconContainer>
+        <TextArea>Increasing campus cleanliness</TextArea>
+        <CardFooterButton>Learn More!</CardFooterButton>
+      </Card>
     </Container>
   )
 }
@@ -61,42 +54,61 @@ const CardsRow = () => {
 export default CardsRow
 
 const Container = styled.div`
-    background-color: #ffffff;
-    display: flex;
-    text-align: center;
-    height:100%;
-    overflow:scroll;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  height: 100%;
 
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
+  }
 `
+
 const Card = styled.div`
-    margin:24px;
-    display: block;
-    min-width: 250px;
-    border: 3px solid #BDD7EE;
-    border-radius: 15px;
-    justify-content: space-around;
-    background-color: #BDD7EE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+  width: 250px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
 `
-const CustomImg = styled.img`
-    max-width: 100%;
-    height: 50%;
+
+const IconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
 `
+
 const TextArea = styled.p`
-    margin-bottom: 20px;
-    line-height: 1.5;
-    font-size: 36px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  margin: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  white-space: pre-wrap;
 `
+
 const CardFooterButton = styled.button`
-    background-color:transparent;
-    border: 3px transparent;
-    font-size: 20px;
-    padding-bottom: 10px;
-    align-self: flex-end;
-    flex: 1 1 auto;
-    &:hover{
-        opacity:0.5;
-    }
+  margin: 12px;
+  padding: 8px;
+  background-color: #007FFF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
 `

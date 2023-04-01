@@ -7,7 +7,9 @@ const MainBody = () => {
   return (  
     <>
        <InfoSection/>
+       <br/>
        <CardsRow/>
+       <br/>
     </>
   )
 }

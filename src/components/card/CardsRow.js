@@ -1,51 +1,60 @@
 import React from 'react'
 import styled from 'styled-components';
 import { FaBolt, FaTemperatureLow, FaTint, FaRecycle, FaTree, FaTrash } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
-const CardsRow = () => {
-  return (
+
+const CardsRow = () => 
+{
+
+  const navigate  = useNavigate();
+
+  const handleLearnMore = (path) => {
+    navigate(path);
+  };
+    return (
     <Container>
       <Card>
         <IconContainer>
           <FaBolt size={64} color="#007FFF" />
         </IconContainer>
         <TextArea>Optimizing Power Consumption</TextArea>
-        <CardFooterButton>Learn More!</CardFooterButton>
+        <CardFooterButton onClick={() => handleLearnMore('Water')}>Learn More!</CardFooterButton>
       </Card>
       <Card>
         <IconContainer>
           <FaTemperatureLow size={64} color="#007FFF" />
         </IconContainer>
         <TextArea>Microclimate and Air Quality Monitoring</TextArea>
-        <CardFooterButton>Learn More!</CardFooterButton>
+        <CardFooterButton onClick={() => handleLearnMore('Water')}>Learn More!</CardFooterButton>
       </Card>
       <Card>
         <IconContainer>
           <FaTint size={64} color="#007FFF" />
         </IconContainer>
         <TextArea>Optimizing Water Consumption</TextArea>
-        <CardFooterButton>Learn More!</CardFooterButton>
+        <CardFooterButton onClick={() => handleLearnMore('Water')}>Learn More!</CardFooterButton>
       </Card>
       <Card>
         <IconContainer>
           <FaRecycle size={64} color="#007FFF" />
         </IconContainer>
         <TextArea>The Recycling and Garbage Efficiency</TextArea>
-        <CardFooterButton>Learn More!</CardFooterButton>
+        <CardFooterButton onClick={() => handleLearnMore('Water')}>Learn More!</CardFooterButton>
       </Card>
       <Card>
         <IconContainer>
           <FaTree size={64} color="#007FFF" />
         </IconContainer>
         <TextArea>Micro-climatic Eco-Human Space</TextArea>
-        <CardFooterButton>Learn More!</CardFooterButton>
+        <CardFooterButton onClick={() => handleLearnMore('Water')}>Learn More!</CardFooterButton>
       </Card>
       <Card>
         <IconContainer>
           <FaTrash size={64} color="#007FFF" />
         </IconContainer>
         <TextArea>Increasing campus cleanliness</TextArea>
-        <CardFooterButton>Learn More!</CardFooterButton>
+        <CardFooterButton onClick={() => handleLearnMore('Water')}>Learn More!</CardFooterButton>
       </Card>
     </Container>
   )

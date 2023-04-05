@@ -5,12 +5,16 @@ import styled from 'styled-components';
 const Footer = () => {
   return (
     <>
-      <Separator />
       <Container>
+      <Separator />
+      <br/>
+      <br/>
+
         <Quote>
           An innovative approach to optimal resource use and maximal comfort.
         </Quote>
         <Link href="https://www.hit.ac.il/">HIT College Site</Link>
+        <p>&copy; 2023 Smart Campus Project</p>
       </Container>
     </>
   );
@@ -23,9 +27,9 @@ const Container = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #F0FFFF;
   padding: 32px;
   margin-top: 64px;
+  width: 100%;
 `;
 
 const Quote = styled.p`

@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import { FaBars } from 'react-icons/fa'
 import "../Style.css"
+import logoImage from '../hit_logo.svg';
+
+
 
 const MainHeader = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -11,10 +14,8 @@ const MainHeader = () => {
   return (
     <Container> 
       <CustomNavBar>
-      <Logo>
-          {/* <img src="logo.png" alt="Smart Campus Project"/> */}
-          <Title>Smart Campus</Title>
-        </Logo>
+          {/*<img src={logoImage} alt="Smart Campus Logo" />*/}
+          <Title><a href="/">Smart Campus</a></Title>
       <MenuIcon onClick={handleMenuClick}>
           <FaBars />
         </MenuIcon>
@@ -75,6 +76,10 @@ const Title = styled.h1`
   font-size: 24px;
   color: #333333;
   margin-left: 10px;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
   /* Media queries */
   @media screen and (max-width: 480px) {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LecturersAndTeams() {
+const StaffPage = () => {
     return (
       <div style={styles.lecturersAndTeamsContainer}>
         <h1 style={styles.lecturersAndTeamsHeading}>Lecturers and Teams</h1>
@@ -103,4 +103,4 @@ const styles = {
   },
 };
 
-export default LecturersAndTeams;
+export default StaffPage;

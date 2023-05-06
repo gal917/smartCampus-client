@@ -1,9 +1,9 @@
 import React from 'react'
-import "../Style.css"
+import "../../Style.css"
 import styled from 'styled-components'
-import MainBody from '../components/MainBody'
+import MainBody from '../MainBody'
 
-const mainPage = () => {
+const MainPage = () => {
   return (
     <MainContainer>
       <MainBody/> 
@@ -13,7 +13,7 @@ const mainPage = () => {
   )
 }
 
-export default mainPage
+export default MainPage
 
 const MainContainer = styled.div`
   width: 100%;

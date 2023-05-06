@@ -21,7 +21,7 @@ const MainHeader = () => {
         </MenuIcon>
         <MenuLinks show={showMenu}>
         <ul>
-          <li><a href="Stuff">Stuff</a></li>
+          <li><a href="staff">staff</a></li>
           <li><a href="Students">Students</a></li> 
           <li><a href="Partners">Partners</a></li>
           <li><a href="Contact">Contact Us</a></li>

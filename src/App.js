@@ -1,9 +1,9 @@
 
 import './App.css';
-import WaterPage from './screens/WaterPage.js';
-import ContactUs from './screens/ContactPage.js';
-import Staff from './screens/StaffPage.js';
-import Students from './screens/StudentsPage.js';
+import WaterPage from './components/screens/WaterPage.js';
+import ContactUs from './components/screens/ContactPage.js';
+import Staff from './components/screens/StaffPage.js';
+import Students from './components/screens/StudentsPage.js';
 import Header from './components/MainHeader.js';
 import Footer from './components/Footer.js';
 import MainPage from './components/screens/MainPage.js';
